@@ -1,0 +1,18 @@
+ Example: (String x) -> x.toUpperCase()
+Function<String, String> toUpper1 = (String x) -> x.toUpperCase(); 
+Function<String, String> toUpper2 = String::toUpperCase;
+
+A. (Employee e) -> e.getName()
+Function<Employee,String> getName1 = (Employee x) -> x.getName(); 
+Function<Employee,String> getName2 = Employee::getName;
+
+B. (Employee e,String s) -> e.setName(s)
+BiFunction<Employee,String, void> setName1 = (Employee x, String name) -> x.setName(name); 
+BiFunction<Employee,String, void> setName1 = Employee::setName; 
+
+C. (String s1,String s2) -> s1.compareTo(s2)
+D. (Integer x,Integer y) -> Math.pow(x,y)
+E. (Apple a) -> a.getWeight()
+F. (String x) -> Integer.parseInt(x);
+G. EmployeeNameComparator comp = new EmployeeNameComparator();
+(Employee e1, Employee e2) -> comp.compare(e1,e2)
